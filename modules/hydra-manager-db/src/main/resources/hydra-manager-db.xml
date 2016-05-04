@@ -34,6 +34,19 @@
         <property name="initialSize" value="10"></property>
         <property name="minIdle" value="10"></property>
         <property name="jdbcInterceptors" value="ConnectionState;StatementFinalizer;StatementDecoratorInterceptor;ResetAbandonedTimer"></property>
+
+
+        <property name="testWhileIdle" value="true"></property>
+        <property name="testOnBorrow" value="true"></property>
+        <property name="validationQuery" value="select 1"></property>
+        <property name="testOnReturn" value="false"></property>
+        <property name="validationInterval" value="30000"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="5000"></property>
+        <property name="maxWait" value="15000"></property>
+        <property name="removeAbandoned" value="true"></property>
+        <property name="removeAbandonedTimeout" value="60"></property>
+        <property name="logAbandoned" value="false"></property>
+        <property name="minEvictableIdleTimeMillis" value="30"></property>
     </bean>
     <!--数据库层  自己默认提供一个属性配置-->
     <bean id="propertyConfigurer-manager-db" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
